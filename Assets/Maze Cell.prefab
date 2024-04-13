@@ -367,6 +367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7319099328879929444}
   - component: {fileID: 5659937274504136118}
+  - component: {fileID: 7613177592107712630}
+  - component: {fileID: 6231054960799550209}
   m_Layer: 0
   m_Name: Maze Cell
   m_TagString: Untagged
@@ -411,6 +413,42 @@ MonoBehaviour:
   _leftWall: {fileID: 6484550498735763457}
   _rightWall: {fileID: 8285325758606280443}
   _unvisitedBlock: {fileID: 3643483202657486987}
+--- !u!65 &7613177592107712630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240178629225648859}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &6231054960799550209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240178629225648859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ae9e18c558001478a4cbc0024a7758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeCellCollider: {fileID: 7613177592107712630}
+  mazeTransform: {fileID: 7319099328879929444}
+  rotationSpeed: 100
 --- !u!1 &5828367865414867599
 GameObject:
   m_ObjectHideFlags: 0
