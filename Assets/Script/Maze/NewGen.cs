@@ -7,7 +7,10 @@ using UnityEngine.Tilemaps;
 public class NewGen : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabs;
+
+    [SerializeField] private int collectibleCount;
     [SerializeField] private GameObject collectable;
+    
     [SerializeField] private int gridX;
     [SerializeField] private int gridZ;
     [SerializeField] private float spacing;
@@ -48,7 +51,6 @@ public class NewGen : MonoBehaviour
     void GenerateCollectibles()
     {
         HashSet<Vector3> usedPositions = new HashSet<Vector3>();
-        int collectibleCount = 3; // Number of collectibles to place
 
         for (int i = 0; i < collectibleCount; i++)
         {

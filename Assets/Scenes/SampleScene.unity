@@ -5632,6 +5632,7 @@ MonoBehaviour:
   - {fileID: 43859628}
   - {fileID: 1900791262}
   - {fileID: 1923819202}
+  collectibleCount: 3
   collectable: {fileID: 730206975}
   gridX: 10
   gridZ: 10
