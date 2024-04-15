@@ -111,7 +111,7 @@ public class MazeGen : MonoBehaviour
 
         if (prevCell.transform.localPosition.x < currCell.transform.localPosition.x)
         {
-            prevCell.ClearLeftWall();
+            //prevCell.ClearLeftWall();
             prevCell.ClearRightWall();
             currCell.ClearLeftWall();
             return;
@@ -126,15 +126,16 @@ public class MazeGen : MonoBehaviour
 
         if (prevCell.transform.localPosition.z < currCell.transform.localPosition.z)
         {
-            prevCell.ClearFrontWall();
-            currCell.ClearBackWall();
+            //prevCell.ClearFrontWall();
+            //prevCell.ClearBackWall();
+            //currCell.ClearBackWall();
             return;
         }
 
         if (prevCell.transform.localPosition.z > currCell.transform.localPosition.z)
         {
-            prevCell.ClearBackWall();
-            currCell.ClearFrontWall();
+            //prevCell.ClearBackWall();
+            //currCell.ClearFrontWall();
             return;
         }
     }
