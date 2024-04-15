@@ -7,21 +7,27 @@ public class CollectiblesGenerator : MonoBehaviour
 {
     [SerializeField] GameObject collectiblePrefab;
     [SerializeField] int numOfCollectibles = 3;
+    private SphereCollider collectibleCollider;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
+        collectibleCollider = collectiblePrefab.GetComponent<SphereCollider>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        GenerateCollectibles();
+       // GenerateCollectibles();
     }
 
     private void GenerateCollectibles()
     {
         throw new NotImplementedException();
+    }
+
+    private void OnTriggerEnter(Collider collectibleCollider)
+    {
+        collectiblePrefab.SetActive(false);
     }
 }

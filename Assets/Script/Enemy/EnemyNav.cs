@@ -25,11 +25,11 @@ public class EnemyNav : MonoBehaviour
     {
         if (enemyCollider.CompareTag("Player"))
         {
-            KillPlayer(enemyCollider.gameObject);
+            CapturePlayer(enemyCollider.gameObject);
         }
     }
 
-    private void KillPlayer(GameObject player)
+    private void CapturePlayer(GameObject player)
     {
         player.SetActive(false);
         Debug.Log("Game Over");
