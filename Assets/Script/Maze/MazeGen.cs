@@ -137,4 +137,12 @@ public class MazeGen : MonoBehaviour
             return;
         }
     }
+
+    public int GetWidth() {
+        return _mazeWidth;
+    }
+
+    public int GetHeight() {
+        return _mazeDepth;
+    }
 }
