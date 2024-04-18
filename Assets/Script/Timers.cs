@@ -16,8 +16,8 @@ public class Timers : MonoBehaviour
     private float[] lightsMin = new float[] { 0, 4, 5, 6 };
     private float[] lightsMax = new float[] { 0, 7, 9, 11 };
 
-    //Increases by a max of 30 and a min of 10 every second, variation of 30
-    private int[] ambienceAverage = new int[] { 0, 150, 180, 210 };
+    //Increases by a max of 40 and a min of 20 every second, variation of 30
+    private int[] ambienceAverage = new int[] { 0, 200, 220, 240 };
 
     //Link to audio script
     [SerializeField]
@@ -35,13 +35,14 @@ public class Timers : MonoBehaviour
     void Start()
     {
  
+        //Random values are lower on average at start
         //Ambience setup
-        ambienceRandom = Random.Range(ambienceAverage[getLevel()] - 30, ambienceAverage[getLevel()] + 30);
+        ambienceRandom = Random.Range(ambienceAverage[getLevel()] - 30, ambienceAverage[getLevel()]);
         Debug.Log("Random ambience timer is " + ambienceRandom);
         StartCoroutine(ambienceManager());
 
         //Lights setup
-        lightsRandom = Random.Range(lightsMin[getLevel()], lightsMax[getLevel()]);
+        lightsRandom = lightsMin[getLevel()];
         Debug.Log("Random lights timer is "+ lightsRandom);
 
         //Audio setup
@@ -101,16 +102,16 @@ public class Timers : MonoBehaviour
             if (ambienceCounter >= ambienceRandom)
             {
                 ambienceCounter = 0;
-                ambienceRandom = Random.Range(ambienceAverage[getLevel()] - 30, ambienceAverage[getLevel()] + 30);
+                ambienceRandom = Random.Range(ambienceAverage[getLevel()] - 40, ambienceAverage[getLevel()] + 40);
                 switch (getEnemyDistance())
                 {
-                    case 1:
+                    case 2:
                         audioManager.PlayAudio("ambienceFar");
                         break;
-                    case 2:
+                    case 3:
                         audioManager.PlayAudio("ambienceMedium");
                         break;
-                    case 3:
+                    case 4:
                         audioManager.PlayAudio("ambienceClose");
                         break;
                 }
@@ -121,19 +122,22 @@ public class Timers : MonoBehaviour
 
     int getEnemyDistance()
     {
+        int distanceValue = 2;
         float playerEnemyDistance = Vector3.Distance(playerObject.transform.position, enemyObject.transform.position);
         if (playerEnemyDistance <= 16f)
         {
-            return 3;
+            distanceValue = 4;
         }
         else if (playerEnemyDistance <= 32f)
         {
-            return 2;
+            distanceValue = 3;
         }
         else
         {
-            return 1;
+            distanceValue = 2;
         }
+        //Check LOS, add 1 if in LOS (and clamp to max of 4)
+        return distanceValue;
     }
 
     int getLevel()

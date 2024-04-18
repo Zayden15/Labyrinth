@@ -29,6 +29,7 @@ public class AudioManagerScript : MonoBehaviour
     //Random.Range (min, max) MAX IS EXCLUSIVE, min is inclusive
     public void PlayAudio(string AudioFileType)
     {
+        Debug.Log("Playing audio type: " + AudioFileType);
         Rand2 = Random.Range(1, 3);
         Rand3 = Random.Range(1, 4);
 
@@ -74,11 +75,9 @@ public class AudioManagerScript : MonoBehaviour
                 {
                     case 1:
                         ambienceClose1.Play();
-                        Debug.Log("audio1");
                         break;
                     case 2:
                         ambienceClose2.Play();
-                        Debug.Log("audio 2");
                         break;
                 }
                 break;
