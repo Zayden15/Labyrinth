@@ -59,7 +59,7 @@ public class AudioManagerScript : MonoBehaviour
                 switch (Rand3)
                 {
                     case 1:
-                        ambienceFar1.Play();
+                        ambienceMedium1.Play();
                         break;
                     case 2:
                         ambienceMedium2.Play();
