@@ -1632,7 +1632,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e50d839f4b1aaf4387a6211313cab14, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   visionAngle: 600
   visionObstructingLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 0
   visionConeResolution: 500
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -13,11 +13,11 @@ public class Timers : MonoBehaviour
     private bool isFlickering = false;
 
     //In seconds, can use decimals
-    private float[] lightsMin = new float[] { 0, 4, 5, 6 };
-    private float[] lightsMax = new float[] { 0, 7, 9, 11 };
+    private float[] lightsMin = new float[] { 0, 5, 6, 7 };
+    private float[] lightsMax = new float[] { 0, 10, 12, 14 };
 
     //Increases by a max of 40 and a min of 20 every second, value is +- 30
-    private int[] ambienceAverage = new int[] { 0, 200, 220, 240 };
+    private int[] ambienceAverage = new int[] { 0, 250, 300, 350 };
 
     //Link to audio script
     [SerializeField]
@@ -40,7 +40,7 @@ public class Timers : MonoBehaviour
  
         //Random values are lower on average at start
         //Ambience setup
-        ambienceRandom = Random.Range(ambienceAverage[getLevel()] - 30, ambienceAverage[getLevel()]);
+        ambienceRandom = Random.Range(ambienceAverage[getLevel()]/2, ambienceAverage[getLevel()]);
         Debug.Log("Random ambience timer is " + ambienceRandom);
         StartCoroutine(ambienceManager());
 
@@ -82,7 +82,7 @@ public class Timers : MonoBehaviour
         Debug.Log("Flickering lights");
         audioManager.PlayAudio("lightsFlickerOn");
         playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Obstructions");
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.1f);
         //Off
         playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions");
         Debug.Log("Lights have turned off again");
