@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6931274357015559065}
-  - component: {fileID: 8148425100661266792}
   - component: {fileID: 1528586011949052589}
+  - component: {fileID: 6689428272343372138}
   m_Layer: 0
   m_Name: MazeGen
   m_TagString: Untagged
@@ -33,21 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8148425100661266792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418654994808326129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77788b1b27ade584baa8a089951092ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mazeCellPrefab: {fileID: 5659937274504136118, guid: 41f29928f187e6f42b574eac73e67be5, type: 3}
-  _mazeWidth: 10
-  _mazeDepth: 10
 --- !u!114 &1528586011949052589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,3 +64,18 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ab2490147c1a61843af99ac1d1692e11, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &6689428272343372138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418654994808326129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77788b1b27ade584baa8a089951092ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mazeCellPrefab: {fileID: 5659937274504136118, guid: a4db97882d2417042a34420ca995d0d6, type: 3}
+  _mazeWidth: 10
+  _mazeDepth: 10

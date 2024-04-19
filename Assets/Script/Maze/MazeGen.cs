@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -73,7 +73,7 @@ public class MazeGen : MonoBehaviour
             }
         }
 
-        if ( x - 1 >= 0)
+        if (x - 1 >= 0)
         {
             var cellToLeft = _mazeGrid[x - 1, z];
 
@@ -138,12 +138,13 @@ public class MazeGen : MonoBehaviour
         }
     }
 
-    public int GetWidth() {
+    public int GetWidth()
+    {
         return _mazeWidth;
     }
 
-    public int GetHeight() {
+    public int GetHeight()
+    {
         return _mazeDepth;
     }
 }
-*/
