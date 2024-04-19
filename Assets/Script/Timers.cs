@@ -16,7 +16,7 @@ public class Timers : MonoBehaviour
     private float[] lightsMin = new float[] { 0, 4, 5, 6 };
     private float[] lightsMax = new float[] { 0, 7, 9, 11 };
 
-    //Increases by a max of 40 and a min of 20 every second, variation of 30
+    //Increases by a max of 40 and a min of 20 every second, value is +- 30
     private int[] ambienceAverage = new int[] { 0, 200, 220, 240 };
 
     //Link to audio script
@@ -28,6 +28,9 @@ public class Timers : MonoBehaviour
     private GameObject playerObject;
     [SerializeField]
     private GameObject enemyObject;
+
+    //Get player vision layermask
+    private VisionCone playerVisionScript;
 
     
 
@@ -48,6 +51,9 @@ public class Timers : MonoBehaviour
         //Audio setup
         audioManager = FindObjectOfType<AudioManagerScript>();
 
+        //get playerVision Script
+        playerVisionScript = playerObject.GetComponentInChildren< VisionCone >();
+
     }
 
     // Update is called once per frame
@@ -66,28 +72,19 @@ public class Timers : MonoBehaviour
             StartCoroutine(flickerLights());
         }
 
+
     }
 
     IEnumerator flickerLights()
     {
-        //float flickerTimer = 0.0f;
+        //On
         isFlickering = true;
         Debug.Log("Flickering lights");
         audioManager.PlayAudio("lightsFlickerOn");
+        playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Obstructions");
         yield return new WaitForSeconds(2.5f);
-
-        //Set player view cone to ignore walls?
-
-
-        //Make light fade in
-        /*while (flickerTimer < 0.5f)
-        {
-            yield return new WaitForSeconds(0.1f);
-            flickerTimer += Time.deltaTime;
-            //Do a thing that slightly increases lights
-        }*/
-
-
+        //Off
+        playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions");
         Debug.Log("Lights have turned off again");
         audioManager.PlayAudio("lightsFlickerOff");
         isFlickering = false;
@@ -145,5 +142,6 @@ public class Timers : MonoBehaviour
         //Return level of game
         return 1;
     }
+
 
 }
