@@ -824,6 +824,8 @@ MonoBehaviour:
   - {fileID: 1115978134179859316, guid: 89a9e514613e5ec45a0d2af734c26848, type: 3}
   collectibleCount: 3
   collectable: {fileID: 897914527015162843, guid: 3a3e0a4ef3cd3714b84b6cb3043067d6, type: 3}
+  mapParent: {fileID: 1382296547}
+  collectiblesParent: {fileID: 1676900073}
   gridX: 10
   gridZ: 10
   spacing: 7.5

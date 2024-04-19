@@ -10,7 +10,10 @@ public class NewGen : MonoBehaviour
 
     [SerializeField] private int collectibleCount;
     [SerializeField] private GameObject collectable;
-    
+
+    [SerializeField] private GameObject mapParent;
+    [SerializeField] private GameObject collectiblesParent;
+
     [SerializeField] private int gridX;
     [SerializeField] private int gridZ;
     [SerializeField] private float spacing;
@@ -31,7 +34,7 @@ public class NewGen : MonoBehaviour
             {
                 Vector3 position = new Vector3(x * spacing, 0, z * spacing);
 
-                
+
                 int randomRotation = Random.Range(0, 4) * 90;
                 if (randomRotation == 270)
                 { // Convert 270 to -90 for consistency with your request
@@ -41,7 +44,7 @@ public class NewGen : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(0, randomRotation, 0);
 
                 GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
-                GameObject tile = Instantiate(prefab, position, Quaternion.identity);
+                GameObject tile = Instantiate(prefab, position, rotation, mapParent.transform);
 
                 MazeCell mazeCell = tile.AddComponent<MazeCell>();
             }
@@ -62,7 +65,7 @@ public class NewGen : MonoBehaviour
             if (!usedPositions.Contains(position))
             {
                 Debug.Log("Collectible made");
-                Instantiate(collectable, position, Quaternion.identity);
+                GameObject collectible = Instantiate(collectable, position, Quaternion.identity, collectiblesParent.transform);
                 usedPositions.Add(position);
             }
             else
