@@ -8,7 +8,8 @@ public class VisionCone : MonoBehaviour
     [SerializeField] private Material visionConeMaterial;
     [SerializeField] private float visionRange;
     [SerializeField] private float visionAngle;
-    [SerializeField] private LayerMask visionObstructingLayer;
+    //[SerializeField]
+    public LayerMask visionObstructingLayer;
     [SerializeField] private int visionConeResolution = 120;
     private Mesh visionConeMesh;
     private MeshFilter meshFilter_;
@@ -19,6 +20,7 @@ public class VisionCone : MonoBehaviour
         meshFilter_ = transform.AddComponent<MeshFilter>();
         visionConeMesh = new Mesh();
         visionAngle *= Mathf.Deg2Rad;
+        visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions");
     }
 
 
