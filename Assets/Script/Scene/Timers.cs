@@ -83,6 +83,14 @@ public class Timers : MonoBehaviour
         audioManager.PlayAudio("lightsFlickerOn");
         playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Obstructions");
         yield return new WaitForSeconds(2.1f);
+        if (playerObject)
+        {
+            Debug.Log("AAAAA");
+        }
+        else
+        {
+            Debug.Log("where?");
+        }
         //Off
         playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions");
         Debug.Log("Lights have turned off again");
