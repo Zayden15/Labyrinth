@@ -309,6 +309,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
+--- !u!1 &1347204970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 392167078656137133, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+  m_PrefabInstance: {fileID: 1427768924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1427768924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,6 +371,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+--- !u!1 &1825786768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4385529678135158705, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
+  m_PrefabInstance: {fileID: 8476385375051330484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1249085225797307640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +538,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2640349538553017511, guid: e40441d6a89d11145a1b711ba5bc46af, type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 1347204970}
+    - target: {fileID: 2640349538553017511, guid: e40441d6a89d11145a1b711ba5bc46af, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1825786768}
     - target: {fileID: 7321912542126356055, guid: e40441d6a89d11145a1b711ba5bc46af, type: 3}
       propertyPath: m_Name
       value: Timers
