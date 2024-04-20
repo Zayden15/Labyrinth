@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7762982446861633957}
   - component: {fileID: 4198541624413524971}
   - component: {fileID: 7487821694188941713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 9d8cde200f1445145bfcbf7e3b90111d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1091,7 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4461939463620031345}
   - component: {fileID: 6171281025728130105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 3 way
   m_TagString: Untagged
   m_Icon: {fileID: 0}
