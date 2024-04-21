@@ -30,7 +30,7 @@ public class SceneHandler : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Tiles");
+        SceneManager.LoadScene("Maze");
         Debug.Log("Scene is loaded");
     }
 }

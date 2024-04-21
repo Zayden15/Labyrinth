@@ -29,8 +29,8 @@ public class NewGen : MonoBehaviour
         }
 
         GenerateGrid();
-        GenerateCollectibles();
         BuildNavMesh();
+        GenerateCollectibles();
 
         if (player != null)
 
