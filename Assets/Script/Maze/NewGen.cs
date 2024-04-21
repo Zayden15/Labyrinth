@@ -20,9 +20,24 @@ public class NewGen : MonoBehaviour
 
     void Start()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+
+        {
+            player.SetActive(false);
+        }
+
         GenerateGrid();
-        BuildNavMesh();
         GenerateCollectibles();
+        BuildNavMesh();
+
+        if (player != null)
+
+        {
+            player.SetActive(true);
+        }
+
     }
 
     void GenerateGrid()
