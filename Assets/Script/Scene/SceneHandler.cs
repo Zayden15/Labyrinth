@@ -6,20 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    [SerializeField] GameObject[] objects;
     [SerializeField] SceneHandler sceneHandler;
 
     private void Awake()
     {
-        /*if (sceneHandler == null)
-        {
-            sceneHandler = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }*/
+
     }
 
 
@@ -28,9 +19,30 @@ public class SceneHandler : MonoBehaviour
         
     }
 
-    public void LoadScene()
+    public void LoadTutorialLevel()
+    {
+        SceneManager.LoadScene("Tiles");
+        
+    }
+    public void LoadLevel1()
     {
         SceneManager.LoadScene("Maze");
-        Debug.Log("Scene is loaded");
+
     }
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Maze");
+
+    }
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Maze");
+
+    }
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene("Maze");
+
+    }
+
 }
