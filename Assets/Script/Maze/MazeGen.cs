@@ -11,11 +11,18 @@ public class MazeGen : MonoBehaviour
     [SerializeField] private int _mazeWidth;
     [SerializeField] private int _mazeDepth;
     [SerializeField] private Maze[,] _mazeGrid;
+    
 
     void Start()
     {
-        _mazeGrid = new Maze[_mazeWidth, _mazeDepth];
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.SetActive(false);
+        }
 
+
+        _mazeGrid = new Maze[_mazeWidth, _mazeDepth];
         for (int x = 0; x < _mazeWidth; x++)
         {
             for (int z = 0; z < _mazeDepth; z++)
@@ -28,6 +35,12 @@ public class MazeGen : MonoBehaviour
         //yield return GenerateMaze(null, _mazeGrid[0, 0]);
         GenerateMaze(null, _mazeGrid[0, 0]);
         GetComponent<NavMeshSurface>().BuildNavMesh();
+        
+        if (player != null) 
+        {
+            player.SetActive(true);
+        }
+
     }
 
     private void GenerateMaze(Maze prevCell, Maze currCell)
