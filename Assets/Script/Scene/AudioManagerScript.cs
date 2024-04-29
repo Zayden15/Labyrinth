@@ -98,8 +98,10 @@ public class AudioManagerScript : MonoBehaviour
                         ambienceClose1.Play();
                         break;
                 }
+                break;
+
             case "sprintingStalker":
-                switch (Rand3)
+                switch (Rand2)
                 {
                     case 1:
                         ambienceMedium1.Play();
@@ -108,6 +110,7 @@ public class AudioManagerScript : MonoBehaviour
                         ambienceMedium1.Play();
                         break;
                 }
+                break;
         }
         //end of audio switch
     }
