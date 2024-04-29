@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManagerScript : MonoBehaviour
 {
     //Audio initialising, set in inspector
+    [SerializeField] AudioSource bGAudio;
     [SerializeField] AudioSource lightsFlickerOn;
     [SerializeField] AudioSource lightsFlickerOff;
     [SerializeField] AudioSource ambienceFar1;
@@ -20,15 +21,17 @@ public class AudioManagerScript : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start() { }
+    void Start() { PlayBGAudio(); }
     // Update is called once per frame
     void Update(){}
 
+    
 
     //Manage general audio, here to have all audio components in one place
     //Random.Range (min, max) MAX IS EXCLUSIVE, min is inclusive
     public void PlayAudio(string AudioFileType)
     {
+
         Debug.Log("Playing audio type: " + AudioFileType);
         Rand2 = Random.Range(1, 3);
         Rand3 = Random.Range(1, 4);
@@ -84,5 +87,10 @@ public class AudioManagerScript : MonoBehaviour
 
         }
         //end of audio switch
+    }
+    void PlayBGAudio()
+    {
+        bGAudio.Play();
+
     }
 }
