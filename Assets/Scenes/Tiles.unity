@@ -1026,6 +1026,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4385529678135158705, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
   m_PrefabInstance: {fileID: 710495419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872241599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8304908944720174882, guid: 9c861bd105daac04bb132a2ad3badd60, type: 3}
+  m_PrefabInstance: {fileID: 57810869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad009746283ecf498a27dffb9ff2695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1960035517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1052,7 @@ GameObject:
   - component: {fileID: 1960035519}
   - component: {fileID: 1960035518}
   m_Layer: 13
-  m_Name: Enemy
+  m_Name: EnemySeeker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1786290137}
+  audioManager: {fileID: 1872241599}
 --- !u!195 &1960035519
 NavMeshAgent:
   m_ObjectHideFlags: 0

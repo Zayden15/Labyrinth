@@ -35,6 +35,7 @@ public class AudioManagerScript : MonoBehaviour
 
         switch (AudioFileType)
         {
+            //Lights flickering
             case "lightsFlickerOn":
                 lightsFlickerOn.Play();
                 break;
@@ -43,7 +44,8 @@ public class AudioManagerScript : MonoBehaviour
                 lightsFlickerOff.Play();
                 break;
 
-            case "ambienceFar":
+            //Seeker enemy
+            case "ambienceFarSeeker":
                 switch (Rand2)
                 {
                     case 1:
@@ -55,7 +57,7 @@ public class AudioManagerScript : MonoBehaviour
                 }
                 break;
 
-            case "ambienceMedium":
+            case "ambienceMediumSeeker":
                 switch (Rand3)
                 {
                     case 1:
@@ -70,7 +72,7 @@ public class AudioManagerScript : MonoBehaviour
                 }
                 break;
 
-            case "ambienceClose":
+            case "ambienceCloseSeeker":
                 switch (Rand2)
                 {
                     case 1:
@@ -82,6 +84,30 @@ public class AudioManagerScript : MonoBehaviour
                 }
                 break;
 
+            //Stalker enemy (placeholder audio)
+            case "ambienceCloseStalker":
+                switch (Rand3)
+                {
+                    case 1:
+                        ambienceClose1.Play();
+                        break;
+                    case 2:
+                        ambienceClose2.Play();
+                        break;
+                    case 3:
+                        ambienceClose1.Play();
+                        break;
+                }
+            case "sprintingStalker":
+                switch (Rand3)
+                {
+                    case 1:
+                        ambienceMedium1.Play();
+                        break;
+                    case 2:
+                        ambienceMedium1.Play();
+                        break;
+                }
         }
         //end of audio switch
     }
