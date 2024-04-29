@@ -8,17 +8,24 @@ public class EnemyNav : MonoBehaviour
     [SerializeField] private GameObject player;
     private SphereCollider enemyCollider;
 
+    [SerializeField] private Vector3 tDest;
+    private Vector3 ogPos;
+    private Vector3 currentTarget;
+    private NavMeshAgent agent;
+    private float checkRate = 0.5f;
 
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        ogPos = transform.position;
+        currentTarget = tDest;
+        agent.destination = currentTarget; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = player.transform.position;
+        InvokeRepeating(nameof(CheckArrival), 0.1f, checkRate);
     }
 
 
@@ -26,6 +33,7 @@ public class EnemyNav : MonoBehaviour
     {
         if (enemyCollider.CompareTag("Player"))
         {
+            Debug.Log("Captured");
             CapturePlayer(enemyCollider.gameObject);
         }
     }
@@ -34,5 +42,19 @@ public class EnemyNav : MonoBehaviour
     {
         player.SetActive(false);
         Debug.Log("Game Over");
+    }
+
+    void CheckArrival()
+    {
+        if (Vector3.Distance(transform.position, currentTarget) < 0.5f)
+        {
+            ToggleDestination();
+        }
+    }
+
+    void ToggleDestination()
+    {
+        currentTarget = currentTarget == tDest ? ogPos : tDest;
+        agent.destination = currentTarget;
     }
 }
