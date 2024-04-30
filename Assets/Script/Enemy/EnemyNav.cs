@@ -17,9 +17,10 @@ public class EnemyNav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<NavMeshAgent>().destination = player.transform.localPosition;
-        enemyCollider = player.GetComponent<SphereCollider>();
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = player.transform.position;
     }
+
 
     private void OnTriggerEnter(Collider enemyCollider)
     {
