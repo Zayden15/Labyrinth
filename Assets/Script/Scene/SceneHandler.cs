@@ -41,7 +41,7 @@ public class SceneHandler : MonoBehaviour
     }
     public void LoadLevel4()
     {
-        SceneManager.LoadScene("Maze");
+        SceneManager.LoadScene("Level4");
 
     }
 

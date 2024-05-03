@@ -167,6 +167,14 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3719502737020728401, guid: babfa5e486009c945a41f2d6d06954d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1825392682}
+    - target: {fileID: 3719502737020728401, guid: babfa5e486009c945a41f2d6d06954d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel4
+      objectReference: {fileID: 0}
     - target: {fileID: 4181526878105155454, guid: babfa5e486009c945a41f2d6d06954d7, type: 3}
       propertyPath: m_Name
       value: MenuCanvas

@@ -85,7 +85,7 @@ public class Timers : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
 
         //Off
-        playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions");
+        playerVisionScript.visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions", "VFX");
         Debug.Log("Lights have turned off again");
         audioManager.PlayAudio("lightsFlickerOff");
         isFlickering = false;
