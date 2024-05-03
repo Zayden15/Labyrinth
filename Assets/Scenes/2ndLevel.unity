@@ -6510,6 +6510,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2640887968849974313, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640887968849974313, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640887968849974313, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640887968849974313, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: m_ProvidesContacts
       value: 1
       objectReference: {fileID: 0}
@@ -14109,6 +14121,17 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1677260786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+  m_PrefabInstance: {fileID: 778792724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677260779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02ebbc08c2536048bb398a9f69b8a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1677260791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14122,7 +14145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
-  angle: 100
+  angle: 360
   playerRef: {fileID: 0}
   targetMask:
     serializedVersion: 2
@@ -14131,6 +14154,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   canSeePlayer: 0
+  enemy: {fileID: 1677260786}
 --- !u!1 &1699836854
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,12 @@ public class EnemyNav : MonoBehaviour
     private NavMeshAgent agent;
     private float checkRate = 0.5f;
 
+    private bool isChasing;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        
         agent = GetComponent<NavMeshAgent>();
         ogPos = transform.position;
         currentTarget = tDest;
@@ -25,28 +29,22 @@ public class EnemyNav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InvokeRepeating(nameof(CheckArrival), 0.1f, checkRate);
+        Patrolling();
     }
 
 
-    private void OnTriggerEnter(Collider enemyCollider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (enemyCollider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("Captured");
-            CapturePlayer(enemyCollider.gameObject);
+            //CapturePlayer();
         }
     }
 
-    private void CapturePlayer(GameObject player)
+    void Patrolling()
     {
-        player.SetActive(false);
-        Debug.Log("Game Over");
-    }
-
-    void CheckArrival()
-    {
-        if (Vector3.Distance(transform.position, currentTarget) < 0.5f)
+        if (!isChasing && Vector3.Distance(transform.position, currentTarget) < 0.5f)
         {
             ToggleDestination();
         }
@@ -55,6 +53,19 @@ public class EnemyNav : MonoBehaviour
     void ToggleDestination()
     {
         currentTarget = currentTarget == tDest ? ogPos : tDest;
+        agent.destination = currentTarget;
+    }
+
+    public void chasePlayer()
+    {
+        isChasing = true;
+        agent.destination = player.transform.position;
+    }
+
+    public void stopChase()
+    {
+        isChasing = false;
+        currentTarget = tDest;
         agent.destination = currentTarget;
     }
 }

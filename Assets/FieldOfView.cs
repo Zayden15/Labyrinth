@@ -15,7 +15,7 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstructionMask;
 
     public bool canSeePlayer;
-
+    public EnemyNav enemy;
     private void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
@@ -49,15 +49,24 @@ public class FieldOfView : MonoBehaviour
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
                     canSeePlayer = true;
+                    enemy.chasePlayer();
                     Debug.Log("Found!");
                 }
                 else
+                {
                     canSeePlayer = false;
+                }
+                    
             }
             else
                 canSeePlayer = false;
         }
         else if (canSeePlayer)
+        {
             canSeePlayer = false;
+            enemy.stopChase();
+        }
+            
+
     }
 }
