@@ -34,22 +34,22 @@ public class MazeCell : MonoBehaviour
         }
     }
 
-     IEnumerator RotateCell()
+    IEnumerator RotateCell()
     {
-        isRotating = true; 
+        isRotating = true;
 
-        Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = transform.rotation * Quaternion.Euler(0, rotationAngle, 0); 
-
-        float t = 0.0f; 
+        Quaternion startRotation = transform.localRotation;
+        Quaternion targetRotation = transform.localRotation * Quaternion.Euler(0, rotationAngle, 0);
+        float t = 0.0f;
 
         while (t < 1.0f)
         {
-            t += Time.deltaTime * rotationSpeed / 90.0f; 
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t); 
+            t += Time.deltaTime * rotationSpeed / 90.0f;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             yield return null;
         }
 
-        isRotating = false; 
+        isRotating = false;
     }
+
 }
