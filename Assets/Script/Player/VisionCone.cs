@@ -20,7 +20,7 @@ public class VisionCone : MonoBehaviour
         meshFilter_ = transform.AddComponent<MeshFilter>();
         visionConeMesh = new Mesh();
         visionAngle *= Mathf.Deg2Rad;
-        visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions", "VFX");
+        //visionObstructingLayer = LayerMask.GetMask("Walls", "Obstructions", "VFX");
     }
 
 
