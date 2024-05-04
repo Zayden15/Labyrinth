@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuButtonsScaler : MonoBehaviour
 {
@@ -12,5 +13,10 @@ public class MenuButtonsScaler : MonoBehaviour
 
     public void PointerExit() {
         transform.localScale = new Vector3(1,1,1);
+    }
+
+    public void PointerClick()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
     }
 }
