@@ -8,12 +8,22 @@ public class MazeCell : MonoBehaviour
     private bool playerInside = false;
     private bool isRotating = false;
 
+    private void Start()
+    {
+        ActivateRotationPlatform();
+    }
+
     void Update()
     {
         if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(RotateCell());
         }
+    }
+
+    private void ActivateRotationPlatform() {
+        GameObject ChildGameObject1 = this.transform.GetChild(0).gameObject;
+        ChildGameObject1.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -69,13 +69,13 @@ public class Timers : MonoBehaviour
         {
             lightsTimer = 0;
             lightsRandom = Random.Range(lightsMin[getLevel()], lightsMax[getLevel()]);
-            StartCoroutine(flickerLights());
+            //StartCoroutine(flickerLights());
         }
 
 
     }
 
-    IEnumerator flickerLights()
+/*    IEnumerator flickerLights()
     {
         //On
         isFlickering = true;
@@ -91,7 +91,7 @@ public class Timers : MonoBehaviour
         isFlickering = false;
         yield break;
     }
-
+*/
     IEnumerator ambienceManager()
     {
         for (; ; )
