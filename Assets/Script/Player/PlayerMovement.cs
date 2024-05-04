@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,46 +11,65 @@ public class MovementController : MonoBehaviour
     Vector3 currentMovement;
     bool isMovementPressed;
 
-
     private void Awake()
     {
         playerInput = new PlayerInput();
         characterController = GetComponent<CharacterController>();
 
-        playerInput.CharacterControls.Move.started += OnMovementInput;
-        playerInput.CharacterControls.Move.canceled += OnMovementInput;
-        playerInput.CharacterControls.Move.performed += OnMovementInput;
+        playerInput.CharacterControls.Move.started += OnMovementStarted;
+        playerInput.CharacterControls.Move.canceled += OnMovementCanceled;
+        playerInput.CharacterControls.Move.performed += OnMovementPerformed;
+    }
+
+    void HandleMovement()
+    {
+        if (isMovementPressed)
+        {
+            // Get the camera's forward direction
+            Vector3 cameraForward = Camera.main.transform.forward;
+            // Ignore the y-axis component to keep the direction in the horizontal plane
+            cameraForward.y = 0f;
+            // Use the camera's forward direction for movement
+            currentMovement = cameraForward.normalized * currentMovementInput.y + Camera.main.transform.right.normalized * currentMovementInput.x;
+        }
+        else
+        {
+            // If no movement input, stop the player
+            currentMovement = Vector3.zero;
+        }
     }
 
     void HandleRotation()
     {
-        Vector3 positionToLookAt;
-        positionToLookAt.x = currentMovement.x;
-        positionToLookAt.y = 0f;
-        positionToLookAt.z = currentMovement.z;
-
-        Quaternion currentRotation = transform.rotation;
-        if (isMovementPressed)
+        if (isMovementPressed && currentMovement.magnitude > 0)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
-            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.LookRotation(currentMovement);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
         }
-
     }
 
     void Update()
     {
+        HandleMovement();
         HandleRotation();
         characterController.Move((currentMovement * velocity) * Time.deltaTime);
     }
 
-    void OnMovementInput(InputAction.CallbackContext context)
+    void OnMovementStarted(InputAction.CallbackContext context)
     {
         currentMovementInput = context.ReadValue<Vector2>();
-        currentMovement.x = currentMovementInput.x;
-        currentMovement.z = currentMovementInput.y;
-        isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
+        isMovementPressed = true;
+    }
 
+    void OnMovementPerformed(InputAction.CallbackContext context)
+    {
+        currentMovementInput = context.ReadValue<Vector2>();
+    }
+
+    void OnMovementCanceled(InputAction.CallbackContext context)
+    {
+        currentMovementInput = Vector2.zero;
+        isMovementPressed = false;
     }
 
     private void OnEnable()
