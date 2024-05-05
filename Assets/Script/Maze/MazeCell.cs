@@ -8,6 +8,7 @@ public class MazeCell : MonoBehaviour
     private bool playerInside = false;
     private bool isRotating = false;
 
+
     private void Start()
     {
         ActivateRotationPlatform();

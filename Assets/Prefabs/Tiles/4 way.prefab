@@ -85,6 +85,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standing Computer Desk 01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

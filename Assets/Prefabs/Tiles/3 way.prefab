@@ -31,8 +31,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3023928146725236379}
   - {fileID: 7881501225097989687}
+  - {fileID: 3023928146725236379}
   - {fileID: 2454873466151190172}
   - {fileID: 6794684063535192821}
   - {fileID: 6415450385512581211}
@@ -471,6 +471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standing Computer Desk 01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -489,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalRotation.w
