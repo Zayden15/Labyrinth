@@ -5,6 +5,7 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField] PlayerInput playerInput;
     [SerializeField] CharacterController characterController;
+    [SerializeField] Animator animator;
     [SerializeField] float velocity;
     [SerializeField] float rotationFactorPerFrame = 1f;
     Vector2 currentMovementInput;
@@ -48,8 +49,29 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    public void HandleAnimation() {
+
+        bool isRunning = animator.GetBool("isRunning");
+        bool isPushing = animator.GetBool("isPushing");
+
+        if (isMovementPressed && !isRunning)
+        {
+
+            animator.SetBool("isRunning", true);
+        }
+
+        else if (!isMovementPressed && isRunning) {
+            animator.SetBool("isRunning", false);
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.E)) {
+            animator.SetBool("isPushing", true);
+        }*/
+    }
+
     void Update()
     {
+        HandleAnimation();
         HandleMovement();
         HandleRotation();
         characterController.Move((currentMovement * velocity) * Time.deltaTime);
