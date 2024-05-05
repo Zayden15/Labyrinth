@@ -2244,7 +2244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &207462418
 Transform:
   m_ObjectHideFlags: 0
@@ -4421,7 +4421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: destinations.Array.size
@@ -4465,7 +4465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[3].x
-      value: -28
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[3].y
@@ -4473,11 +4473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[3].z
-      value: 44
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[4].x
-      value: -13
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[4].y
@@ -4485,7 +4485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[4].z
-      value: 21
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: Destination.Array.data[5].x
@@ -7723,6 +7723,10 @@ PrefabInstance:
     - target: {fileID: 1756542417313488, guid: dfa0cfd3107e27845ae048f64f656f62, type: 3}
       propertyPath: m_Name
       value: Pipes 01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756542417313488, guid: dfa0cfd3107e27845ae048f64f656f62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146628050301592, guid: dfa0cfd3107e27845ae048f64f656f62, type: 3}
       propertyPath: m_LocalScale.x
