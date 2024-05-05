@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    // Static counter to track collected items across all instances
-    public static int collectibleCount = 0;
-
+    private static int collectibleCount = 0;
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the collider is tagged as "Player"
         if (other.CompareTag("Player"))
         {
-            collectibleCount++; // Increment the collectible count
+            collectibleCount++;
             Debug.Log("Collectible gathered! Total: " + collectibleCount);
 
-            Destroy(gameObject); // Destroy the collectible
+            Destroy(gameObject);
         }
+    }
+
+    public static bool CheckCount()
+    {
+        if (collectibleCount == 3) { return true; }
+        return false;
     }
 }

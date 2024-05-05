@@ -8,13 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5f7abe8bcf344f54da21014e126b380c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Maze.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tiles.unity
     guid: c8a98a6dd2b6b8f4ea7201e33e82e734
   - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: f704970f931fb7f409823bb9f4c0ea8b
+  - enabled: 1
+    path: Assets/Scenes/2ndLevel.unity
+    guid: abbb2cf633a210440bcb774e70850d91
   m_configObjects: {}
