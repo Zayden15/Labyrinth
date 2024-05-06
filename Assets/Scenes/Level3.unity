@@ -4173,6 +4173,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824388260}
   m_Mesh: {fileID: 4300000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
+--- !u!1 &849609282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849609283}
+  m_Layer: 0
+  m_Name: Randomly generate maze (apart from 2.2 middle)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849609283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849609282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2500014, y: 1.1395378, z: 5.2875414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861203568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6476,7 +6507,7 @@ PrefabInstance:
       objectReference: {fileID: 785775223}
     - target: {fileID: 587846959337415356, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
       propertyPath: velocity
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1091769667474596342, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
       propertyPath: m_Layer
@@ -11510,3 +11541,4 @@ SceneRoots:
   - {fileID: 1758348345}
   - {fileID: 222408626}
   - {fileID: 820913827}
+  - {fileID: 849609283}
