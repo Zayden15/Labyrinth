@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 4581515915049482335}
+  animator: {fileID: 4105734324433127629}
   velocity: 10
   rotationFactorPerFrame: 10
 --- !u!1001 &4154743094728800817
@@ -493,6 +494,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538090c735358e94db8b3f02fda66106, type: 3}
+--- !u!95 &4105734324433127629 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95388447411679996, guid: 538090c735358e94db8b3f02fda66106, type: 3}
+  m_PrefabInstance: {fileID: 4154743094728800817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4159287604614710263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4607911127939526, guid: 538090c735358e94db8b3f02fda66106, type: 3}
