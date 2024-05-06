@@ -40,6 +40,7 @@ public class EnemyNav : MonoBehaviour
     {
         Debug.Log("Touched");
         other.gameObject.SetActive(false);  // This deactivates the player GameObject
+        SceneHandler.LoadLevel2();
     }
     }
 
