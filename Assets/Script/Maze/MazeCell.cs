@@ -4,7 +4,6 @@ using UnityEngine;
 public class MazeCell : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 100f;
-    private int rotationAngle = 90;
     private bool playerInside = false;
     private bool isRotating = false;
 
@@ -18,7 +17,11 @@ public class MazeCell : MonoBehaviour
     {
         if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(RotateCell());
+            StartCoroutine(RotateCellLeft());
+        }
+        else if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(RotateCellRight());
         }
     }
 
@@ -45,8 +48,28 @@ public class MazeCell : MonoBehaviour
         }
     }
 
-    IEnumerator RotateCell()
+    IEnumerator RotateCellLeft()
     {
+        int rotationAngle = 90;
+        isRotating = true;
+
+        Quaternion startRotation = transform.localRotation;
+        Quaternion targetRotation = transform.localRotation * Quaternion.Euler(0, rotationAngle, 0);
+        float t = 0.0f;
+
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime * rotationSpeed / 90.0f;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
+            yield return null;
+        }
+
+        isRotating = false;
+    }
+
+    IEnumerator RotateCellRight()
+    {
+        int rotationAngle = -90;
         isRotating = true;
 
         Quaternion startRotation = transform.localRotation;

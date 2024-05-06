@@ -6,24 +6,25 @@ using UnityEngine.AI;
 public class EnemyNav : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    private SphereCollider enemyCollider;
 
-    [SerializeField] private Vector3 tDest;
+    [SerializeField] private List<Vector3> Destination;
+    private int currentDestinationIndex = 0;
     private Vector3 ogPos;
     private Vector3 currentTarget;
     private NavMeshAgent agent;
-    private float checkRate = 0.5f;
 
     private bool isChasing;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
         agent = GetComponent<NavMeshAgent>();
-        ogPos = transform.position;
-        currentTarget = tDest;
-        agent.destination = currentTarget; 
+
+        if (Destination.Count > 0)
+        {
+            currentTarget = Destination[0];
+            agent.destination = currentTarget;
+        }
     }
 
     // Update is called once per frame
@@ -36,15 +37,15 @@ public class EnemyNav : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
-            Debug.Log("Captured");
-            //CapturePlayer();
-        }
+    {
+        Debug.Log("Touched");
+        other.gameObject.SetActive(false);  // This deactivates the player GameObject
+    }
     }
 
     void Patrolling()
     {
-        if (!isChasing && Vector3.Distance(transform.position, currentTarget) < 0.5f)
+        if (!isChasing && Vector3.Distance(transform.position, currentTarget) < 0.2f)
         {
             ToggleDestination();
         }
@@ -52,7 +53,10 @@ public class EnemyNav : MonoBehaviour
 
     void ToggleDestination()
     {
-        currentTarget = currentTarget == tDest ? ogPos : tDest;
+        if (Destination.Count == 0) return;
+
+        currentDestinationIndex = (currentDestinationIndex + 1) % Destination.Count;
+        currentTarget = Destination[currentDestinationIndex];
         agent.destination = currentTarget;
     }
 
@@ -65,7 +69,7 @@ public class EnemyNav : MonoBehaviour
     public void stopChase()
     {
         isChasing = false;
-        currentTarget = tDest;
+        currentTarget = Destination[currentDestinationIndex];
         agent.destination = currentTarget;
     }
 }

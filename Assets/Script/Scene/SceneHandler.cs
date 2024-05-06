@@ -24,24 +24,24 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("Tiles");
         
     }
-    public void LoadLevel1()
+    public static void LoadLevel1()
     {
         SceneManager.LoadScene("Maze");
 
     }
-    public void LoadLevel2()
+    public static void LoadLevel2()
+    {
+        SceneManager.LoadScene("2ndLevel");
+
+    }
+    public static void LoadLevel3()
     {
         SceneManager.LoadScene("Maze");
 
     }
-    public void LoadLevel3()
+    public static void LoadLevel4()
     {
-        SceneManager.LoadScene("Maze");
-
-    }
-    public void LoadLevel4()
-    {
-        SceneManager.LoadScene("Level4");
+        SceneManager.LoadSceneAsync("Level4");
 
     }
 

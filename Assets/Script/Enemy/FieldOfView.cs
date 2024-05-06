@@ -50,7 +50,7 @@ public class FieldOfView : MonoBehaviour
                 {
                     canSeePlayer = true;
                     enemy.chasePlayer();
-                    Debug.Log("Found!");
+                    //Debug.Log("Found!");
                 }
                 else
                 {
