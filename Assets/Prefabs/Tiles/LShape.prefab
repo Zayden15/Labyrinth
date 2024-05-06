@@ -26,18 +26,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738786941258768431}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.25, y: 0, z: 5.25}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7823549990685888092}
   - {fileID: 771177845830634563}
   - {fileID: 4890737042172073071}
-  - {fileID: 7823549990685888092}
   - {fileID: 4984644829796782956}
   - {fileID: 7044402851497404994}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &3855861890908774194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7bcc9b232ae6bb6439d309f9dfedec0f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -473,6 +473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standing Computer Desk 01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -491,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bf71f3066c4424428c73ed98233ce6e, type: 3}
       propertyPath: m_LocalRotation.w
