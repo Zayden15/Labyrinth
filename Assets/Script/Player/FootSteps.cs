@@ -7,6 +7,8 @@ public class FootSteps : MonoBehaviour
 {
     [SerializeField] AudioClip[] audioClips;
     private AudioSource audioSource;
+    [SerializeField] float minPitch = 0.8f;
+    [SerializeField] float maxPitch = 1.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,10 @@ public class FootSteps : MonoBehaviour
     }
 
     private void Step() {
+
         AudioClip clip = GetRandomClip();
+        float pitch = UnityEngine.Random.Range(minPitch, maxPitch);
+        audioSource.pitch = pitch;
         audioSource.PlayOneShot(clip);
     }
 
