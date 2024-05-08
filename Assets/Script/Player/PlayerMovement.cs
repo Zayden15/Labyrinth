@@ -69,11 +69,24 @@ public class MovementController : MonoBehaviour
         }*/
     }
 
+    void HandleGravity() {
+        if (characterController.isGrounded)
+        {
+            float groundedGravity = 0.05f;
+            currentMovement.y = groundedGravity;
+        }
+        else {
+            float gravity = -9.8f;
+            currentMovement.y += gravity;
+        }
+    }
+
     void Update()
     {
         HandleAnimation();
         HandleMovement();
         HandleRotation();
+        HandleGravity();
         characterController.Move((currentMovement * velocity) * Time.deltaTime);
     }
 
