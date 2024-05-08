@@ -21,12 +21,12 @@ public class SceneHandler : MonoBehaviour
 
     public void LoadTutorialLevel()
     {
-        SceneManager.LoadScene("Tiles");
+        SceneManager.LoadScene("Level0");
         
     }
     public static void LoadLevel1()
     {
-        SceneManager.LoadScene("Maze");
+        SceneManager.LoadScene("Level1");
 
     }
     public static void LoadLevel2()
@@ -36,7 +36,7 @@ public class SceneHandler : MonoBehaviour
     }
     public static void LoadLevel3()
     {
-        SceneManager.LoadScene("Maze");
+        SceneManager.LoadScene("Level3");
 
     }
     public static void LoadLevel4()
