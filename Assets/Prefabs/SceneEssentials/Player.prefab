@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3377228938191854560}
   - component: {fileID: 7538803253528982917}
-  m_Layer: 0
+  - component: {fileID: 222672273299262878}
+  m_Layer: 3
   m_Name: Inner Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,57 +95,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &438927953268197943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6632267075331831719}
-  - component: {fileID: 3824539446590193978}
-  m_Layer: 0
-  m_Name: VisionField
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6632267075331831719
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438927953268197943}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6717001857489752088}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3824539446590193978
+--- !u!114 &222672273299262878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438927953268197943}
+  m_GameObject: {fileID: 410924620492700528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad262f02c2c292b49ad144d32f44db82, type: 3}
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionConeMaterial: {fileID: 2100000, guid: 5b0f858497f1c4642b2e8b94c72888cf, type: 2}
-  visionRange: 5
-  visionAngle: 600
-  visionObstructingLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  visionConeResolution: 500
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1091769667474596342
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5229201395088306511}
   - component: {fileID: 2872908697525078817}
-  m_Layer: 0
+  - component: {fileID: 457487265211302400}
+  m_Layer: 3
   m_Name: Player Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,6 +213,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &457487265211302400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091769667474596342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &4196196349878495653
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +246,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2012694157960168201}
   - component: {fileID: 2590775594763160631}
-  m_Layer: 0
+  - component: {fileID: 3121924724649612393}
+  m_Layer: 3
   m_Name: Outer Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,6 +331,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3121924724649612393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4196196349878495653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &4385529678135158705
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,14 +382,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40, y: 1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4159287604614710263}
   - {fileID: 2012694157960168201}
   - {fileID: 3377228938191854560}
   - {fileID: 5229201395088306511}
-  - {fileID: 6632267075331831719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &4581515915049482335
@@ -411,7 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 4581515915049482335}
   animator: {fileID: 4105734324433127629}
-  velocity: 10
+  velocity: 8
   rotationFactorPerFrame: 10
 --- !u!1001 &4154743094728800817
 PrefabInstance:
@@ -485,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c123762d7a5ac254eb4dd744dc2e4163, type: 2}
+    - target: {fileID: 95388447411679996, guid: 538090c735358e94db8b3f02fda66106, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 95388447411679996, guid: 538090c735358e94db8b3f02fda66106, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
