@@ -11,11 +11,18 @@ public class MazeGen : MonoBehaviour
     [SerializeField] private int _mazeWidth;
     [SerializeField] private int _mazeDepth;
     [SerializeField] private Maze[,] _mazeGrid;
+    
 
     void Start()
     {
-        _mazeGrid = new Maze[_mazeWidth, _mazeDepth];
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.SetActive(false);
+        }
 
+
+        _mazeGrid = new Maze[_mazeWidth, _mazeDepth];
         for (int x = 0; x < _mazeWidth; x++)
         {
             for (int z = 0; z < _mazeDepth; z++)
@@ -28,6 +35,12 @@ public class MazeGen : MonoBehaviour
         //yield return GenerateMaze(null, _mazeGrid[0, 0]);
         GenerateMaze(null, _mazeGrid[0, 0]);
         GetComponent<NavMeshSurface>().BuildNavMesh();
+        
+        if (player != null) 
+        {
+            player.SetActive(true);
+        }
+
     }
 
     private void GenerateMaze(Maze prevCell, Maze currCell)
@@ -73,7 +86,7 @@ public class MazeGen : MonoBehaviour
             }
         }
 
-        if ( x - 1 >= 0)
+        if (x - 1 >= 0)
         {
             var cellToLeft = _mazeGrid[x - 1, z];
 
@@ -111,7 +124,10 @@ public class MazeGen : MonoBehaviour
 
         if (prevCell.transform.localPosition.x < currCell.transform.localPosition.x)
         {
+<<<<<<< HEAD
        
+=======
+>>>>>>> Development
             prevCell.ClearRightWall();
             currCell.ClearLeftWall();
             return;
@@ -137,5 +153,15 @@ public class MazeGen : MonoBehaviour
             currCell.ClearFrontWall();
             return;
         }
+    }
+
+    public int GetWidth()
+    {
+        return _mazeWidth;
+    }
+
+    public int GetHeight()
+    {
+        return _mazeDepth;
     }
 }

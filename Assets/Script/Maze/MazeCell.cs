@@ -1,61 +1,89 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MazeCell : MonoBehaviour
 {
-    [SerializeField] BoxCollider mazeCellCollider;
-    [SerializeField] Transform mazeTransform;
-    [SerializeField] float rotationSpeed = 100f;
-    private int rotationAngle = 90;
+    [SerializeField] private float rotationSpeed = 100f;
     private bool playerInside = false;
     private bool isRotating = false;
 
-    void Start()
-    {
 
+    private void Start()
+    {
+        ActivateRotationPlatform();
     }
 
     void Update()
     {
-        if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.E)) 
+        if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(RotateCell()); 
+            StartCoroutine(RotateCellLeft());
         }
+        else if (playerInside && !isRotating && Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(RotateCellRight());
+        }
+    }
+
+    private void ActivateRotationPlatform() {
+        GameObject ChildGameObject1 = this.transform.GetChild(0).gameObject;
+        ChildGameObject1.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        
+        if (other.CompareTag("Player"))
         {
-            playerInside = true; 
+            playerInside = true;
+            Debug.Log("Entered");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
-            playerInside = false; 
+            playerInside = false;
         }
     }
 
-    IEnumerator RotateCell()
+    IEnumerator RotateCellLeft()
     {
-        isRotating = true; 
+        int rotationAngle = 90;
+        isRotating = true;
 
-        Quaternion startRotation = mazeTransform.rotation;
-        Quaternion targetRotation = mazeTransform.rotation * Quaternion.Euler(0, rotationAngle, 0); 
-
-        float t = 0.0f; 
+        Quaternion startRotation = transform.localRotation;
+        Quaternion targetRotation = transform.localRotation * Quaternion.Euler(0, rotationAngle, 0);
+        float t = 0.0f;
 
         while (t < 1.0f)
         {
-            t += Time.deltaTime * rotationSpeed / 90.0f; 
-            mazeTransform.rotation = Quaternion.Slerp(startRotation, targetRotation, t); 
+            t += Time.deltaTime * rotationSpeed / 90.0f;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             yield return null;
         }
 
-        isRotating = false; 
+        isRotating = false;
     }
+
+    IEnumerator RotateCellRight()
+    {
+        int rotationAngle = -90;
+        isRotating = true;
+
+        Quaternion startRotation = transform.localRotation;
+        Quaternion targetRotation = transform.localRotation * Quaternion.Euler(0, rotationAngle, 0);
+        float t = 0.0f;
+
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime * rotationSpeed / 90.0f;
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
+            yield return null;
+        }
+
+        isRotating = false;
+    }
+
 }

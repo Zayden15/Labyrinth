@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Walls
@@ -17,9 +17,9 @@ TagManager:
   - Mask
   - BehindMask
   - Unselectable
-  - 
-  - 
-  - 
+  - Collectibles
+  - Enemy
+  - VFX
   - 
   - 
   - 
