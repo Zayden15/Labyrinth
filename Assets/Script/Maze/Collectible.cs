@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    private static int collectibleCount = 0;
+    [SerializeField] AudioClip pickupSFX;
+    [SerializeField] int pointsForOnePickup = 1;
+    bool wasCollected = false;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !wasCollected)
         {
-            collectibleCount++;
-            Debug.Log("Collectible gathered! Total: " + collectibleCount);
-
+            wasCollected = true;
+            FindObjectOfType<GameSession>().AddAsCollected(pointsForOnePickup);
+            AudioSource.PlayClipAtPoint(pickupSFX, Camera.main.transform.position);
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }
+    
 
-    public static bool CheckCount()
-    {
-        if (collectibleCount == 3) { return true; }
-        return false;
-    }
 }

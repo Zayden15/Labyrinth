@@ -32,17 +32,7 @@ public class EnemyNav : MonoBehaviour
     {
         Patrolling();
     }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-    {
-        Debug.Log("Touched");
-        other.gameObject.SetActive(false);  // This deactivates the player GameObject
-        SceneHandler.LoadLevel2();
-    }
-    }
+ 
 
     void Patrolling()
     {
