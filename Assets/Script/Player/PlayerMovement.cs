@@ -22,6 +22,16 @@ public class MovementController : MonoBehaviour
         playerInput.CharacterControls.Move.performed += OnMovementPerformed;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("Touched");
+            other.gameObject.SetActive(false);  // This deactivates the player GameObject
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        }
+    }
+
     void HandleMovement()
     {
         if (isMovementPressed)
