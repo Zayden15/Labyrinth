@@ -5816,7 +5816,7 @@ PrefabInstance:
     - target: {fileID: 2640349538553017511, guid: e40441d6a89d11145a1b711ba5bc46af, type: 3}
       propertyPath: enemyObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1266063745}
     - target: {fileID: 2640349538553017511, guid: e40441d6a89d11145a1b711ba5bc46af, type: 3}
       propertyPath: playerObject
       value: 
@@ -6259,6 +6259,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0c29e08b40a6742bb074809665a4e7, type: 3}
+--- !u!1 &1266063745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 392167078656137133, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+  m_PrefabInstance: {fileID: 1477863270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1266084126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7792,6 +7797,38 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 295493007}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[1].x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[2].x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[2].z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[3].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
+      propertyPath: Destination.Array.data[3].z
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4784610054995598346, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
