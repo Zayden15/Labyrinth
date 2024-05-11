@@ -4339,11 +4339,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8838260525128938796, guid: 107164cca97548644a373a42d1e0d6bb, type: 3}
   m_PrefabInstance: {fileID: 781331728}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &785775223 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4105734324433127629, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
-  m_PrefabInstance: {fileID: 1343053174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &787232397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7242870752692509208, guid: 8bd74490e145bd147827eb984427dec7, type: 3}
@@ -4913,7 +4908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 12
   angle: 360
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 295493007}
   targetMask:
     serializedVersion: 2
     m_Bits: 8
@@ -5039,7 +5034,7 @@ PrefabInstance:
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 295493007}
+      objectReference: {fileID: 0}
     - target: {fileID: 710202904834209490, guid: 09134c37f37d85f41b46737aed67a997, type: 3}
       propertyPath: tDest.x
       value: -51
@@ -7249,9 +7244,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bbc8cded5c78eea478488ed6f2cef172, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 36677871650b46e488428ec2141edddd, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1334490387
 PrefabInstance:
@@ -7484,7 +7479,7 @@ PrefabInstance:
     - target: {fileID: 587846959337415356, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 785775223}
+      objectReference: {fileID: 1343053175}
     - target: {fileID: 587846959337415356, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
       propertyPath: velocity
       value: 10
@@ -7635,6 +7630,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1760788035}
   m_SourcePrefab: {fileID: 100100000, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
+--- !u!95 &1343053175 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4804352426618602137, guid: 9ed65dbfb021385408f34a89f0403170, type: 3}
+  m_PrefabInstance: {fileID: 1343053174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1344295940
 PrefabInstance:
   m_ObjectHideFlags: 0
