@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stun_Gun_1
+* source:	https://sketchfab.com/3d-models/stun-gun-1-056ad4a989024259a2b8de9566cd4a9e
+* author:	flashn7 (https://sketchfab.com/flashn7)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stun_Gun_1" (https://sketchfab.com/3d-models/stun-gun-1-056ad4a989024259a2b8de9566cd4a9e) by flashn7 (https://sketchfab.com/flashn7) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
