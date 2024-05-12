@@ -1046,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6271741570591534312, guid: 0e8d628724069f443b304062ed9cd8ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.955799
+      value: 8.9558
       objectReference: {fileID: 0}
     - target: {fileID: 6271741570591534312, guid: 0e8d628724069f443b304062ed9cd8ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1054,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6271741570591534312, guid: 0e8d628724069f443b304062ed9cd8ad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2922797
+      value: -4.292279
       objectReference: {fileID: 0}
     - target: {fileID: 6271741570591534312, guid: 0e8d628724069f443b304062ed9cd8ad, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4584,37 +4584,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8838260525128938796, guid: 107164cca97548644a373a42d1e0d6bb, type: 3}
   m_PrefabInstance: {fileID: 1483936966}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &849609282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 849609283}
-  m_Layer: 0
-  m_Name: Randomly generate maze (apart from 2.2 middle)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &849609283
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849609282}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2500014, y: 1.1395378, z: 5.2875414}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &851867551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7242870752692509208, guid: 8bd74490e145bd147827eb984427dec7, type: 3}
@@ -7250,7 +7219,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 36677871650b46e488428ec2141edddd, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c8d2af5ab0a7193469efbc9987a27d08, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1334490387
 PrefabInstance:
@@ -8843,7 +8812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5618378274036621889, guid: 38660a899da61f34cb95528022e499f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5618378274036621889, guid: 38660a899da61f34cb95528022e499f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9879,7 +9848,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3156048880778081029, guid: 3bd746a22d62cac4497b38d76a37355b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.955799
+      value: 8.9558
       objectReference: {fileID: 0}
     - target: {fileID: 3156048880778081029, guid: 3bd746a22d62cac4497b38d76a37355b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9887,7 +9856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156048880778081029, guid: 3bd746a22d62cac4497b38d76a37355b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2922797
+      value: -4.292279
       objectReference: {fileID: 0}
     - target: {fileID: 3156048880778081029, guid: 3bd746a22d62cac4497b38d76a37355b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11458,7 +11427,6 @@ SceneRoots:
   - {fileID: 1716353063}
   - {fileID: 1758348345}
   - {fileID: 222408626}
-  - {fileID: 849609283}
   - {fileID: 1315258154}
   - {fileID: 1606435121}
   - {fileID: 963890750}
