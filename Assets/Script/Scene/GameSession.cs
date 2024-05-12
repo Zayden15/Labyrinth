@@ -37,10 +37,7 @@ public class GameSession : MonoBehaviour
             Destroy(gameObject);
         }
 
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+
     }
 
     private void Start()
