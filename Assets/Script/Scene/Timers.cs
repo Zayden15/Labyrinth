@@ -12,6 +12,11 @@ public class Timers : MonoBehaviour
     private int ambienceRandom;
     private bool isFlickering = false;
 
+    [SerializeField]
+    private float distanceClose = 16.0f;
+    [SerializeField]
+    private float distanceMedium = 32.0f;
+
     //In seconds, can use decimals
     private float[] lightsMin = new float[] { 0, 5, 6, 7 };
     private float[] lightsMax = new float[] { 0, 10, 12, 14 };
@@ -122,11 +127,11 @@ public class Timers : MonoBehaviour
     {
         int distanceValue = 2;
         float playerEnemyDistance = Vector3.Distance(playerObject.transform.position, enemyObject.transform.position);
-        if (playerEnemyDistance <= 16f)
+        if (playerEnemyDistance <= distanceClose)
         {
             distanceValue = 4;
         }
-        else if (playerEnemyDistance <= 32f)
+        else if (playerEnemyDistance <= distanceMedium)
         {
             distanceValue = 3;
         }
