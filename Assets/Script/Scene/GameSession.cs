@@ -21,7 +21,6 @@ public class GameSession : MonoBehaviour
     {
         get { return collectiblesNeededToCollect; }
     }
-
     public int CollectiblesCollected
     {
         get { return collectiblesCollected; }

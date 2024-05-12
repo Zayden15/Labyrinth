@@ -11,11 +11,8 @@ public class ExitPortal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("Player") && gameSession.CollectiblesCollected == gameSession.CollectiblesNeededToCollect)
+        if (other.CompareTag("Player") && gameSession.CollectiblesNeededToCollect == gameSession.CollectiblesCollected)
         {
-            Debug.Log(gameSession.CollectiblesCollected);
-            //Debug.Log("Portal entered");
             StartCoroutine(LoadNextLevel());
         }
     }
