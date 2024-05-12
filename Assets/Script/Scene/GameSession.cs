@@ -39,8 +39,10 @@ public class GameSession : MonoBehaviour
 
         else
         {
-            DontDestroyOnLoad(gameObject);
+           DontDestroyOnLoad(gameObject);
         }
+
+
     }
 
     private void Start()
