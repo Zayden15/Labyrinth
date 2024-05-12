@@ -20,11 +20,13 @@ public class GameSession : MonoBehaviour
     public int CollectiblesNeededToCollect
     {
         get { return collectiblesNeededToCollect; }
+        set { collectiblesNeededToCollect = value; }
     }
 
     public int CollectiblesCollected
     {
         get { return collectiblesCollected; }
+        set { collectiblesCollected = value;}
     }
 
     private void Awake()
@@ -37,13 +39,6 @@ public class GameSession : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        else
-        {
-           DontDestroyOnLoad(gameObject);
-        }
-
-
     }
 
     private void Start()
@@ -52,14 +47,17 @@ public class GameSession : MonoBehaviour
 
     }
 
-    private void UpdateUI() {
+    public void UpdateUI() {
         collectiblesNeeded.text = collectiblesNeededToCollect.ToString();
         collectiblesCount.text = collectiblesCollected.ToString();
     }
     public void ProcessPlayerDeath() {
         if (playerLives > 1)
         {
-            TakeLife();
+            if (TakeLife())
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             UpdateUI();
         }
         else 
@@ -75,11 +73,12 @@ public class GameSession : MonoBehaviour
         UpdateUI();
     }
 
-    private void TakeLife()
+    private bool TakeLife()
     {
         playerLives--;
         SceneManager.LoadScene(currentSceneIndex);
         UpdateUI();
+        return playerLives > 0;
     }
 
     public void ResetGameSession()
@@ -87,10 +86,6 @@ public class GameSession : MonoBehaviour
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(currentSceneIndex);
         Destroy(gameObject);
-    }
-
-    public int GetCollectiblesNeededToCollect() {
-        return collectiblesNeededToCollect;
     }
 
 }
