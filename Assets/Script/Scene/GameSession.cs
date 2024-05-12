@@ -21,6 +21,7 @@ public class GameSession : MonoBehaviour
     {
         get { return collectiblesNeededToCollect; }
     }
+
     public int CollectiblesCollected
     {
         get { return collectiblesCollected; }
@@ -39,8 +40,10 @@ public class GameSession : MonoBehaviour
 
         else
         {
-            DontDestroyOnLoad(gameObject);
+           DontDestroyOnLoad(gameObject);
         }
+
+
     }
 
     private void Start()
