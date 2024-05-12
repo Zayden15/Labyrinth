@@ -124,6 +124,10 @@ public class MazeGen : MonoBehaviour
 
         if (prevCell.transform.localPosition.x < currCell.transform.localPosition.x)
         {
+<<<<<<< HEAD
+       
+=======
+>>>>>>> Development
             prevCell.ClearRightWall();
             currCell.ClearLeftWall();
             return;
