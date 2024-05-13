@@ -31,7 +31,7 @@ public class SceneHandler : MonoBehaviour
     }
     public static void LoadLevel2()
     {
-        SceneManager.LoadScene("2ndLevel");
+        SceneManager.LoadScene("Level2");
 
     }
     public static void LoadLevel3()
